@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: otus-homework
-          image: ekaterinaivanova/otus-homework-1:v2
+          image: ekaterinaivanova/otus-homework-1:v3
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
