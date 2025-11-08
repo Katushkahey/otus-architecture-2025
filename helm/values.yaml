@@ -1,0 +1,37 @@
+replicaCount: 2
+
+image:
+  repository: ekaterinaivanova/otus-homework
+  tag: v3
+  pullPolicy: IfNotPresent
+
+service:
+  port: 80
+  targetPort: 8000
+  type: ClusterIP
+
+ingress:
+  rewriteTarget: /$2
+  className: nginx
+  host: arch.homework
+  path: /otusapp/([^/]+)/(.*)
+  pathType: ImplementationSpecific
+
+livenessProbe:
+  path: /health
+  port: 8000
+  initialDelaySeconds: 30
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 3
+
+db:
+  host: my-postgresql
+  port: 5432
+  database: otusdb
+  username: otususer
+  secretName: my-postgresql
+
+springProfiles:
+  env: prod
+  migration: migration

@@ -1,0 +1,5 @@
+apiVersion: v2
+name: otus-homework
+description: Helm chart for Otus Homework authored by Ekaterina Ivanova
+version: 0.1.0
+appVersion: "0.0.1"

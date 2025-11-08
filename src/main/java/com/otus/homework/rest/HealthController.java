@@ -1,4 +1,4 @@
-package com.otus.homework;
+package com.otus.homework.rest;
 
 import com.otus.homework.dto.ResponseDto;
 import org.springframework.http.ResponseEntity;
