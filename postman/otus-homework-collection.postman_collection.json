@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "6208bb40-77ad-4947-9b77-161a67dcb628",
-		"name": "otus-homework collection",
+		"name": "otus-homework-collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "49519222",
 		"_collection_link": "https://lcr-test-team.postman.co/workspace/LCR-TEST-TEAM-Workspace~9d4b6c89-2352-4f98-8371-8f21e5c86d1d/collection/49519222-6208bb40-77ad-4947-9b77-161a67dcb628?action=share&source=collection_link&creator=49519222"
@@ -22,13 +22,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://arch.homework/user",
+					"raw": "http://arch.homework/otusapp/ekaterina/user",
 					"protocol": "http",
 					"host": [
 						"arch",
 						"homework"
 					],
 					"path": [
+						"otusapp",
+						"ekaterina",
 						"user"
 					]
 				}
@@ -41,13 +43,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://arch.homework/user/1",
+					"raw": "http://arch.homework/otusapp/ekaterina/user/1",
 					"protocol": "http",
 					"host": [
 						"arch",
 						"homework"
 					],
 					"path": [
+						"otusapp",
+						"ekaterina",
 						"user",
 						"1"
 					]
@@ -70,13 +74,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://arch.homework/user/1",
+					"raw": "http://arch.homework/otusapp/ekaterina/user/1",
 					"protocol": "http",
 					"host": [
 						"arch",
 						"homework"
 					],
 					"path": [
+						"otusapp",
+						"ekaterina",
 						"user",
 						"1"
 					]
@@ -90,13 +96,15 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://arch.homework/user/1",
+					"raw": "http://arch.homework/otusapp/ekaterina/user/1",
 					"protocol": "http",
 					"host": [
 						"arch",
 						"homework"
 					],
 					"path": [
+						"otusapp",
+						"ekaterina",
 						"user",
 						"1"
 					]
