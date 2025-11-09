@@ -1,7 +1,7 @@
 replicaCount: 2
 
 image:
-  repository: ekaterinaivanova/otus-homework
+  repository: ekaterinaivanova/otus-homework-1
   tag: v3
   pullPolicy: IfNotPresent
 
