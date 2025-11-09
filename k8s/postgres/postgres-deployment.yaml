@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: postgres
+  name: my-postgresql-deployment
   namespace: otus-homework
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: postgres
+      app: my-postgresql
   template:
     metadata:
       labels:
-        app: postgres
+        app: my-postgresql
     spec:
       containers:
-        - name: postgres
+        - name: my-postgresql
           image: postgres:15
           ports:
             - containerPort: 5432
