@@ -37,7 +37,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: {{ .Values.db.secretName }}
-                  key: postgres-password
+                  key: postgresql-password
             - name: SPRING_CONFIG_IMPORT
               value: optional:file:/opt/app/config/application-{{ .Values.springProfiles.env }}.yaml
           volumeMounts:
