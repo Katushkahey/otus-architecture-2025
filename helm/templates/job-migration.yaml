@@ -19,14 +19,14 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: SPRING_PROFILES_ACTIVE
-              value: "{{ .Values.springProfiles.env }}"
+              value: {{ .Values.springProfiles.env }}
             - name: SPRING_DATASOURCE_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: {{ .Values.db.secretName }}
                   key: POSTGRES_PASSWORD
             - name: SPRING_CONFIG_IMPORT
-              value: optional:file:/opt/app/config/application-{{ .Values.springProfiles.migration }}.yaml
+              value: "optional:file:/opt/app/config/application-{{ .Values.springProfiles.migration }}.yaml"
           volumeMounts:
             - name: config-volume
               mountPath: /opt/app/config
