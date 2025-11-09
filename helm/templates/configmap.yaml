@@ -15,7 +15,7 @@ data:
         hibernate:
           ddl-auto: validate
       datasource:
-        url: jdbc:postgresql://{{ .Values.db.host }}:{{ .Values.db.port }}/{{ .Values.db.name }}
+        url: jdbc:postgresql://{{ .Values.db.host }}:{{ .Values.db.port }}/{{ .Values.db.database }}
         username: {{ .Values.db.username }}
         password: ${SPRING_DATASOURCE_PASSWORD}
 
@@ -27,6 +27,6 @@ data:
         enabled: true
         change-log: classpath:/db/changelog/db.changelog.yaml
       datasource:
-        url: jdbc:postgresql://{{ .Values.db.host }}:{{ .Values.db.port }}/{{ .Values.db.name }}
+        url: jdbc:postgresql://{{ .Values.db.host }}:{{ .Values.db.port }}/{{ .Values.db.database }}
         username: {{ .Values.db.username }}
         password: ${SPRING_DATASOURCE_PASSWORD}

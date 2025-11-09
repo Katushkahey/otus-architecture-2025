@@ -8,8 +8,6 @@ metadata:
     "helm.sh/hook-delete-policy": hook-succeeded,before-hook-creation
 spec:
   template:
-    metadata:
-      name: job-migration
     spec:
       restartPolicy: Never
       containers:
@@ -18,7 +16,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: SPRING_PROFILES_ACTIVE
-              value: {{ .Values.springProfiles.migration }}
+              value: "{{ .Values.springProfiles.migration }}"
             - name: SPRING_DATASOURCE_PASSWORD
               valueFrom:
                 secretKeyRef:
@@ -35,5 +33,5 @@ spec:
           configMap:
             name: {{ .Release.Name }}-app-config
             items:
-                - key: application-{{ .Values.springProfiles.migration }}.yaml
-                  path: application-{{ .Values.springProfiles.migration }}.yaml
+              - key: application-{{ .Values.springProfiles.migration }}.yaml
+                path: application-{{ .Values.springProfiles.migration }}.yaml
