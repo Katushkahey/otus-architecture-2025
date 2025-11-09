@@ -25,7 +25,7 @@ data:
         web-application-type: none
       liquibase:
         enabled: true
-        change-log: classpath:/db/changelog/db.changelog.yaml
+        change-log: classpath:/db/changelog/db.changelog-master.yaml
       datasource:
         url: jdbc:postgresql://{{ .Values.db.host }}:{{ .Values.db.port }}/{{ .Values.db.database }}
         username: {{ .Values.db.username }}
