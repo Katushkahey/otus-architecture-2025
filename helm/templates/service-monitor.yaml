@@ -15,7 +15,7 @@ spec:
   #  jobLabel: stack
   namespaceSelector:
     matchNames:
-      - default
+      - {{ .Release.Name }}
   selector:
     matchLabels:
       app: {{ .Release.Name }}
