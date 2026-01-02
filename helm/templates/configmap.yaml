@@ -18,6 +18,25 @@ data:
         url: jdbc:postgresql://{{ .Values.db.host }}:{{ .Values.db.port }}/{{ .Values.db.database }}
         username: {{ .Values.db.username }}
         password: ${SPRING_DATASOURCE_PASSWORD}
+    management:
+      endpoint:
+        health:
+          show-details: always
+      prometheus:
+        metrics:
+          export:
+            enabled: true
+      metrics:
+        distribution:
+          slo:
+            # noinspection SpringBootApplicationYaml
+            http.server.requests: 10ms, 50ms, 100ms, 200ms, 300ms, 400ms, 500ms, 600ms, 800ms
+          percentiles-histogram:
+            http.server.requests: true
+      endpoints:
+        web:
+          exposure:
+            include: health, info, metrics, prometheus
 
   application-migration.yaml: |
     spring:
